@@ -2,7 +2,7 @@ var app = angular.module('campus360',[]);
 
 app.controller("dashboardcontroller",function($scope){
 
-    $scope.collegename="FISAT";
+    $scope.collegename="FiSaT";
     $scope.totalStudents=1800;
     $scope.totalFaculty=89;
 
@@ -14,11 +14,21 @@ $scope.students=[
 
 ];
 
+
+
+$scope.fees=25600;
+$scope.today=new Date();
+
+$scope.departments=[
+    "cse","MCA","MBA","EEE","BCA","IMCA"
+];
+
+$scope.selectedDepartment = "cse";
+
 $scope.addstudent=function(){
 
+
 $scope.totalStudents++;
-$scope.showstudents=true;
-$scope.showDashboard=true;
 
 };
 
