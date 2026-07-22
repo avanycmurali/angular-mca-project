@@ -19,7 +19,18 @@
     <P>Total Faculty:{{totalFaculty}}</P>
 
     <h2>Student List</h2>
-    <ul>
+    <button ng-click="showstudents= !showstudents">
+
+        show/hide students
+
+
+
+    </button>
+    
+    <div ng-if="showDashboard = !showDashboard">
+
+    <ul ng-hide="showstudents">
+        
 
 <li ng-repeat="student in students">
     {{student}}
@@ -29,6 +40,8 @@
 </li>
 
     </ul>
+    </div>
+
 
 </body>
 </html>

@@ -17,6 +17,8 @@ $scope.students=[
 $scope.addstudent=function(){
 
 $scope.totalStudents++;
+$scope.showstudents=true;
+$scope.showDashboard=true;
 
 };
 
