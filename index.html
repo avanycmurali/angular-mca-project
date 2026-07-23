@@ -126,7 +126,7 @@ Enable Admission
 </button>
 <br><br>
 
-<button ng-disable="isDisabled">
+<button ng-disabled="isDisabled">
 
 Take admission
 
@@ -144,6 +144,65 @@ Take admission
     toggle readonly
 </button>
 <p>readonly status:{{isReadOnly}}</p>
+
+<hr>
+<br><br>
+<h2>Student Registration</h2>
+<form name="studentForm">
+    <label>Student Name</label>
+    <input type="text" ng-model="student.name" required>
+    <br><br>
+    <label>Student Email</label>
+    <input type="email" name="studentEmail" ng-model="student.email" required>
+    <br><br>
+    <label>Student Age</label>
+    <input type="number" ng-model="student.age">
+    <br><br>
+    <label>Student Gender</label>
+    <select ng-model="student.gender">
+        <option value="male">Male</option >
+        <option value="female">Female</option >
+    </select>
+    <br><br>    
+    <label>Student department</label>
+    <select ng-model="student.department">
+        <option value="cse">Computer Science and Engineering</option>
+        <option value="mca">Master of Computer Application</option>
+        <option value="mba">Master of Business Administration</option>
+        <option value="bca">Bachelor of Computer Application</option>
+        <option value="imca">Integrated MCA</option>
+    </select>
+    <br><br>
+    <label>Student Phone</label>
+    <input type="text" ng-model="student.phone">
+    <br><br>
+    <label>Student Address</label>
+    <textarea ng-model="student.address"></textarea>
+    <br><br>
+    <button type="submit">Register Student</button>
+</form>
+
+<hr>
+<br><br>
+<h2>form status</h2>
+<p>
+    valid: {{studentForm.$valid}}
+</p>
+<p>
+    invalid: {{studentForm.$invalid}}
+</p>
+<p>
+    pristine: {{studentForm.$pristine}}
+</p>
+<p>
+    dirty: {{studentForm.$dirty}}
+</p>
+<p ng-show="studentForm.studentForm.$touched && studentForm.studentForm.$invalid"
+style="color:red;">
+   name is required
+</p>
+
+
 </body>
 </html>
 
