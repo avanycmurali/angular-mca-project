@@ -38,6 +38,8 @@ $scope.toggleReadOnly=function(){
     $scope.isReadOnly=!$scope.isReadOnly;
 };
 
+$scope.student={};
+
 $scope.addstudent=function(){
 
 
